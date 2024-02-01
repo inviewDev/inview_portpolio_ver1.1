@@ -1,6 +1,6 @@
-@charset "utf-8"; @import url("https://inviewdev.github.io/I-VIEW_PDS/css/font.css"); html,
+@charset "utf-8"; @import url("https://inviewdev.github.io/I-VIEW_PDS/css/font.css");html,
 body { height:100%; width:100%; max-width:initial !important; background:#232323; } 
-body { overflow-x:hidden; } 
+body { height:auto; overflow-x:hidden; background:rgba(35, 35, 35, 0.5);} 
 html,
 body,
 *,
@@ -95,23 +95,25 @@ caption { display:none; }
 th,td { border:0; vertical-align:top; } 
 legend { visibility:hidden; position:absolute; left:-9999px; top:-9999px; width:0; height:0; line-height:0; } 
 
-/* button */
-
+/* hedaer button */
 .header_wrap nav ul li { display: block; height: 100%; -webkit-animation: hue-rotate 10s linear infinite; animation: hue-rotate 10s linear infinite; } 
-.button { -webkit-font-smoothing: antialiased; background-color: #232323; border: none; color: #fff; display: inline-block; font-family: "Montserrat", sans-serif; text-decoration: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; letter-spacing: 1px; color: white; border-radius: 50px; padding: 17px 25px; text-transform: uppercase; transition: all 0.1s ease-out; font-size: 18px; font-weight: 500; } 
+.button {-webkit-font-smoothing: antialiased;background-color: #232323;border: none;color: #fff;display: inline-block;font-family: "Montserrat", sans-serif;text-decoration: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;letter-spacing: 1px;color: white;border-radius: 50px;padding: 17px 25px;text-transform: uppercase;transition: all 0.1s ease-out;font-size: 18px;font-weight: 500;} 
 .button:hover { background-color: #90feb5; color: #fff; } 
 .button:active { transform: scale(0.95); } 
-.button--bubble { position: relative; z-index: 2; color: white; background: none; } 
+.button--bubble {position: relative;z-index: 2;color: white;background: none;} 
 .button--bubble:hover { background: none; } 
 .button--bubble:hover + .button--bubble__effect-container .circle { background: #44fd82; } 
 .button--bubble:hover + .button--bubble__effect-container .button { background: #44fd82; } 
 .button--bubble:active + .button--bubble__effect-container { transform: scale(0.95); } 
 .button--bubble__container { position: relative; display: inline-block; } 
-.button--bubble__container .effect-button { position: absolute; width: 50%; height: 25%; top: 50%; left: calc(25% - 3px); z-index: 1; transform: translateY(-50%); background: #232323; transition: background 0.1s ease-out; } 
+.button--bubble__container .effect-button {position: absolute;width: 50%;height: 25%;top: 50%;left: calc(25% - 3px);z-index: 1;transform: translateY(-50%);background: #151618;transition: background 0.1s ease-out;} 
 .button--bubble__effect-container { position: absolute; display: block; width: 200%; height: 400%; top: -150%; left: -50%; filter: url("#goo"); transition: all 0.1s ease-out; pointer-events: none; } 
 .button--bubble__effect-container .circle { position: absolute; width: 25px; height: 25px; border-radius: 15px; background: #232323; transition: background 0.1s ease-out; } 
 .button--bubble__effect-container .circle.top-left { top: 40%; left: 27%; } 
 .button--bubble__effect-container .circle.bottom-right { bottom: 40%; right: 27%; } 
+
+
+.sample-canvas { position: fixed; top: 0; left: 0; width: 100%; z-index:-1;} 
 
 @-webkit-keyframes hue-rotate { 
  from { -moz-filter: hue-rotate(0); -ms-filter: hue-rotate(0); filter: hue-rotate(0); } 

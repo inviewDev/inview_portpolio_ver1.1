@@ -118,8 +118,40 @@ $(document).ready(function () {
   // top vis
   var top_card = $(".c_card");
   $(".c_cont").on("mousemove", function (t) {
-      var e = -($(window).innerWidth() / 2 - t.pageX) / 30,
-          n = ($(window).innerHeight() / 2 - t.pageY) / 10;
+      var e = -($(window).innerWidth() / 2 - t.pageX) / 60,
+          n = ($(window).innerHeight() / 2 - t.pageY) / 50;
       top_card.attr("style", "transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-webkit-transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-moz-transform: rotateY(" + e + "deg) rotateX(" + n + "deg)")
   })
 })
+
+// video img
+const canvas = document.querySelector('.sample-canvas');
+const context = canvas.getContext('2d');
+const videoImages = [];
+let totalImagesCount = 176;
+let progress;
+let currentFrame;
+function setImages() {
+  for (let i = 0; i < totalImagesCount; i++) {
+    let imgElem = new Image();
+    imgElem.src = `../resource/videoimg/IMG_${111 + i}.JPG`;
+    videoImages.push(imgElem);
+  }
+}
+function loop() {
+  progress = pageYOffset / (document.body.offsetHeight - window.innerHeight);
+  if (progress < 0) progress = 0;
+  if (progress > 1) progress = 1;
+
+  currentFrame = Math.round((totalImagesCount - 1) * progress);
+  context.drawImage(videoImages[currentFrame], 0, 0);
+
+  requestAnimationFrame(loop);
+}
+function init() {
+  document.body.classList.remove('before-load');
+  context.drawImage(videoImages[0], 0, 0);
+  loop();
+}
+window.addEventListener('load', init);
+setImages();
