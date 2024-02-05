@@ -200,6 +200,27 @@ gsap.utils.toArray(".content_01.parallax_item").forEach(item => {
   );
 });
 
+gsap.from(".belt_cont", {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".content_01",
+    start: "center center",
+    end: "bottom center",
+    scrub: true
+  }
+});
+
+gsap.fromTo(".belt_cont b", 
+  { x: "200%", scale: 2, opacity: 0 }, 
+  { x: "5%", scale: 1, opacity: 1,
+    scrollTrigger: {
+      trigger: ".belt_cont",
+      start: "top center",
+      end: "bottom center",
+      scrub: 1.2
+    }
+  }
+);
 
 $(document).ready(function () {
   $("body, html").smoothWheel()

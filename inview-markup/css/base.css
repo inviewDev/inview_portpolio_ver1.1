@@ -1,6 +1,6 @@
 @charset "utf-8"; @import url("https://inviewdev.github.io/I-VIEW_PDS/css/font.css");html,
 body { height:100%; width:100%; max-width:initial !important; background:#232323; } 
-body { height:auto; overflow-x:hidden; background:rgba(35, 35, 35, 0.5);} 
+body { height:auto; overflow-x:hidden; background:none;} 
 html,
 body,
 *,
