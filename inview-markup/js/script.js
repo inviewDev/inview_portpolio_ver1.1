@@ -53,19 +53,19 @@ function dragEnd(e) {
   $(window).off('mousemove touchmove', drag);
   gsap.set('.ring_box', { cursor: 'grab' });
 }
-function getBgPos(i) { //returns the background-position string_box to create parallax movement in each image
+function getBgPos(i) { 
   return (100 - gsap.utils.wrap(0, 360, gsap.getProperty('.ring_box', 'rotationY') - 180 - i * 36) / 360 * 500) + 'px 0px';
 }
 $(window).on('mousedown touchstart', dragStart);
 $(window).on('mouseup touchend', dragEnd);
 
 new ScrollMagic.Scene({
-  triggerElement: '.ring_cont_slide_box', // 애니메이션을 트리거할 요소를 지정합니다.
-  offset: 10, // 트리거 지점을 조정합니다. 필요에 따라 값 변경이 가능합니다.
-  reverse: false // 스크롤이 다시 올라갈 때 애니메이션을 반복하지 않습니다.
+  triggerElement: '.ring_cont_slide_box',
+  offset: 100,
+  reverse: true 
 })
-  .setTween(galley) // GSAP 타임라인을 씬에 연결합니다.
-  .addTo(controller); // 씬을 컨트롤러에 추가합니다.
+.setTween(galley)
+.addTo(controller); 
 
 // button event
 $('.button--bubble').each(function () {
