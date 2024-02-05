@@ -211,13 +211,39 @@ gsap.from(".belt_cont", {
 });
 
 gsap.fromTo(".belt_cont b", 
-  { x: "200%", scale: 2, opacity: 0 }, 
+  { x: "200%", scale: 1, opacity: 0 }, 
   { x: "5%", scale: 1, opacity: 1,
     scrollTrigger: {
-      trigger: ".belt_cont",
+      trigger: ".parallax_cont",
+      start: "center center",
+      end: "cetner center",
+      scrub: 1
+    }
+  }
+);
+
+gsap.fromTo(".solve_one", 
+  { scale: 2.5, opacity: 0 }, 
+  { scale: 1, opacity: 1,
+    scrollTrigger: {
+      trigger: ".solve_cont",
+      duration: .8,
       start: "top center",
       end: "bottom center",
-      scrub: 1.2
+    }
+  }
+);
+
+
+gsap.fromTo(".solve_two", 
+  { y:"50%", scale: .5, opacity: 0 }, 
+  { y:"0", scale: 1, opacity: 1,
+    scrollTrigger: {
+      trigger: ".solve_cont",
+      duration: 1.2,
+      ease: "power3.inOut",
+      start: "top center",
+      end: "bottom center",
     }
   }
 );

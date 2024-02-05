@@ -27,7 +27,7 @@
 .content_wrap { overflow: hidden; } 
 
 /* parallax__cont */
-.parallax_cont { max-width: 1600px; width: 100%; margin: 0 auto; overflow: hidden; } 
+.parallax_cont { max-width: 1600px; width: 100%; margin: 0 auto; overflow: hidden; position: relative; } 
 .parallax_item { width: 100%; max-width: 840px; margin: 5vw auto; text-align: left; margin-left: 0; position: relative; padding: 0 20px; } 
 .parallax_item:nth-child(even) { margin-right: 0; float: right; text-align: center; margin-top: -10vw; max-width: 560px; } 
 .parallax_item .pickup_cont { position: absolute; right: 10px; top: -25px; transform: rotate(30deg) !important; width: 245px; height: 80px; background: rgb(255 33 116 / 50%); z-index: 1; display: flex; flex-direction: row; justify-content: center; align-items: center; } 
@@ -42,12 +42,36 @@
 .parallax_item:nth-child(even) .parallax_item_p { margin-left: auto; } 
 
 /* parallax photo swiper */
-.ring_cont_slide_box { } 
+.ring_cont_slide_box { position: relative; padding-bottom: 10px; margin-bottom: 10vh; } 
+.ring_cont_slide_box > h2 { font-family: 'Apple SD Gothic Neo'; font-size: 50px; font-weight: 800; color: #fff; text-align: center; } 
+.ring_cont_slide_box > h3 { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); font-family: Montserrat; font-size: 120px; font-weight: 600; color: rgb(255 255 255 / 10%); z-index: -1; } 
 .ring_cont_slide_box .stage { width: 100%; height: 695px; transform-style: preserve-3d; user-select: none; position: relative; } 
 .ring_cont_slide_box .stage .container { perspective: 3000px; width: 480px; height: 100%; left: 50%; top: 50%; transform: translate(-50%,-50%); position: absolute; } 
 .ring_cont_slide_box .stage .container .ring_box { width: 100%; height: 100%; transform-style: preserve-3d; user-select: none; } 
 .ring_cont_slide_box .stage .container .ring_box .cont_box { width: 100%; height: 100%; transform-style: preserve-3d; user-select: none; position: absolute; border-radius: 20px; overflow: hidden; } 
 .ring_cont_slide_box .stage .container .ring_box .cont_box img { width: 100%; height: 100%; object-fit: cover; object-position: top; pointer-events: none; touch-action: none; } 
-.belt_cont { position: absolute; left: 0; width: 100%; height: auto; z-index: -1; display: flex; align-items: center; overflow: hidden; } 
+.belt_cont { position: absolute; left: 0; bottom: 30vh; width: 100%; height: auto; z-index: -1; display: flex; align-items: center; overflow: hidden; } 
+.belt_cont b { font-size: 130px; font-family: 'Apple SD Gothic Neo'; font-weight: 800; color: #ffffff; } 
 
-.belt_cont b { font-size: 140px; font-family: 'Apple SD Gothic Neo'; font-weight: 800; color: #8e1f48a1; } 
+/* solve_cont */
+.solve_cont { height: 100vh; width: 100%; max-width: 1600px; margin: 0 auto; position: relative; } 
+.solve_cont .solve_one { position: relative; width: 840px; height: 540px; } 
+.solve_cont .solve_one img { position: absolute; } 
+.solve_cont .solve_one img:nth-of-type(1) { left: -20px; top: -20px; } 
+.solve_cont .solve_one img:nth-of-type(2) { left: 50%; top: 50%; transform: translate(-50%, -50%); } 
+.solve_cont .solve_one img:nth-of-type(3) { left: calc(50% - 85px); top: calc(50% - 25px); transform: translate(-50%, -50%); } 
+.solve_cont .solve_one img:nth-of-type(4) { bottom: -30px; left: -40px; } 
+.solve_cont .solve_two { position: relative; top: -290px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 765px; height: 430px; } 
+.solve_cont .solve_two img { position: absolute; } 
+.solve_cont .solve_two img:nth-of-type(1) { top: -20px; } 
+.solve_cont .solve_two img:nth-of-type(2) { right: 0; top: -150px; } 
+.solve_cont .solve_two img:nth-of-type(3) { bottom: 50px; right: -40px; } 
+.solve_cont .solve_three { position: absolute; right: 0; top: calc(50% - 100px); width: 350px; height: 350px; transform: translateY(-50%); } 
+.solve_cont .solve_three img { position: absolute; left: 0; } 
+.solve_cont .solve_three img:nth-of-type(1) { } 
+.solve_cont .solve_three img:nth-of-type(2) { left: initial; right: 17px; top: 9px; z-index: -1; animation: rotate 8s linear infinite; } 
+
+@keyframes rotate { 
+ from { transform: rotate(0deg); } 
+ to { transform: rotate(360deg); } 
+ }
