@@ -1,5 +1,5 @@
 @charset "utf-8"; @import url("base.css"); /* header wrap */
-.header_wrap { width: 100%; } 
+.header_wrap { background: linear-gradient(#171614 55%, #17161400 100%); width: 100%; padding: 0px 20px 70px; } 
 .header_wrap article { width: 100%; height: 100px; max-width: 1600px; margin: 0 auto; display: flex; align-items: center; gap: 0 180px; } 
 .header_wrap .logo_box { width: 220px; } 
 .header_wrap .logo_box img { max-width: 100%; height: auto; } 
@@ -8,17 +8,38 @@
 .header_wrap nav ul li { font-family: 'montserrat',sans-serif; font-size: 18px; font-weight: 500; color: #fff; } 
 
 /* top_cont_box */
-.top_cont_box { width: 100%; max-width: 1600px; padding-top: 120px; margin: 0 auto; } 
+.top_cont_box { width: 100%; max-width: 1600px; margin: 0 auto; position: relative; } 
+.top_cont_left { position: absolute; bottom: 16vw; left: 130px; width: 400px; height: 190px; display: flex; z-index: 1; flex-direction: row-reverse; justify-content: flex-start; align-items: center; } 
+.top_cont_left p { font-size: 24px; font-weight: 500; color: #fff; font-family: 'Montserrat'; width: 245px; height: 80px; display: flex; flex-direction: row; background: rgb(255 33 116 / 50%); transform: rotate(13deg) translateY(-30px) translateX(-35px); justify-content: center; align-content: center; align-items: center; } 
+.top_cont_left p:last-of-type { transform: rotate(352deg) translateY(40px) translateX(30px); background: #FF2174; } 
 .perspective { width: 100%; max-width: 660px; perspective: 1000px; } 
-.c_cont { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; margin: auto; position: relative; } 
+.c_cont { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; margin: auto; position: relative; padding: 7vw 20px 15vw; } 
 .c_cont .txt_box { position: absolute; right: 120px; color: #fff; font-size: 18px; line-height: 31px; font-family: 'Apple SD Gothic Neo'; } 
 .c_cont .txt_box p { font-family: inherit; } 
-.c_cont .c_card { width: 610px; height: 760px; margin: auto; box-shadow: 0 70px 63px -60px #494848; transform-style: preserve-3d; position: relative; } 
+.c_cont .c_card { width: 610px; height: 760px; margin: auto; box-shadow: 0 70px 63px -60px #494848; transform-style: preserve-3d; } 
 .c_cont .c_card .thumb { background: url("../img/circle.webp"); background-size: cover; height: 100%; width: 100%; border-radius: 15px; z-index: 5; } 
 .c_cont .c_card .thumb:after { background: inherit; content: ""; display: block; position: absolute; left: -60px; top: 40px; width: 100%; height: 108%; z-index: -1; filter: blur(55px); } 
 .c_cont .c_card h1 { position: absolute; top: 45px; right: -140px; z-index: -1; font-size: 40px; font-weight: 100; transform: translateZ(80px); font-family: 'Montserrat'; font-size: 110px; color: #fff; font-weight: 600; } 
 .c_cont .c_card h1:nth-of-type(2) { top: 125px; z-index: -1; transform: translateZ(-20px); right: -400px; } 
 .c_cont .c_card span { position: absolute; bottom: 40px; right: -280px; font-size: 37px; font-weight: 60; transform: translateZ(35px); } 
+
+/* content_wrap */
+.content_wrap { overflow: hidden; } 
+
+/* parallax__cont */
+.parallax_cont { max-width: 1600px; width: 100%; margin: 0 auto; overflow: hidden; } 
+.parallax_item { width: 100%; max-width: 840px; margin: 5vw auto; text-align: left; margin-left: 0; position: relative; padding: 0 20px; } 
+.parallax_item:nth-child(even) { margin-right: 0; float: right; text-align: center; margin-top: -10vw; max-width: 560px; } 
+.parallax_item .pickup_cont { position: absolute; right: 10px; top: -25px; transform: rotate(30deg) !important; width: 245px; height: 80px; background: rgb(255 33 116 / 50%); z-index: 1; display: flex; flex-direction: row; justify-content: center; align-items: center; } 
+.parallax_item .pickup_cont p { font-size: 24px; font-weight: 500; color: #fff; font-family: 'Montserrat'; } 
+.content_01 .parallax_item_img { background-image: url("../img/cont_img_01.webp"); } 
+.content_02 .parallax_item_img { background-image: url("../img/cont_img_02.webp"); } 
+.parallax_item_imgWrap { width: 100%; padding-bottom: 400px; position: relative; overflow: hidden; border-radius: 20px; } 
+.content_02 .parallax_item_imgWrap { max-width: 350px; padding-bottom: 480px; margin: 0 auto; } 
+.parallax_item_img { position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center; background-size: cover; filter: saturate(0%);} 
+.parallax_item_p { margin-top: 30px; font-size: 36px; line-height: 1.4; z-index: 100; position: relative; word-break: keep-all; color: #fff; font-family: 'Apple SD Gothic Neo'; font-weight: 600; } 
+.parallax_item_p + span { font-family: 'Apple SD Gothic Neo'; font-weight: 500; font-size: 18px; color: #fff; position: absolute; } 
+.parallax_item:nth-child(even) .parallax_item_p { margin-left: auto; } 
 
 /* parallax photo swiper */
 .ring_cont_slide_box { } 

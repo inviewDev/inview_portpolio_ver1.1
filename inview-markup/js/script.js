@@ -1,3 +1,9 @@
+window.scroll({
+  top:0,
+  left:100,
+  behavior: 'smooth'
+})
+
 // ScrollMagic
 let controller = new ScrollMagic.Controller();
 // GSAP
@@ -109,11 +115,98 @@ $('.button--bubble').each(function () {
   });
 });
 
+// parallax item
+gsap.utils.toArray(".parallax_item_p, .parallax_item_span, .parallax_item_img").forEach(item => {
+  let yPercentValue;
+  let opacityValue;
+
+  if (item.classList.contains('parallax_item_p')) {
+    yPercentValue = -200;
+    opacityValue = 0;
+  } else if (item.classList.contains('parallax_item_span')) {
+    yPercentValue = -150;
+    opacityValue = 0;
+  }
+
+  gsap.to(item, {
+    yPercent: yPercentValue,
+    ease: "none",
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: item,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 0.5
+    },  
+  });
+
+  if (item.classList.contains('parallax_item_img')) {
+    gsap.fromTo(item, 
+      { opacity: 0.1 },
+      {
+        opacity: 1,
+        filter: "saturate(100%)",
+        ease: "none",
+        scrollTrigger: {
+          trigger: item,
+          start: "top bottom",
+          end: "center center",
+          scrub: 0.5
+        },
+      }
+    );
+  }
+
+  if (item.classList.contains('parallax_item_span')) {
+    let SplitClient = new SplitType(item, { type: "lines, words, chars" });
+    let lines = SplitClient.lines;
+    let words = SplitClient.words;
+    let chars = SplitClient.chars;
+
+    gsap.from(words, {
+        yPercent: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "circ.out",
+        stagger: {
+            amount: 1,
+            from: "random"
+        },
+        scrollTrigger: {
+            trigger: item,
+            start: "top bottom",
+            end: "+=400",
+        }
+    });
+  }
+});
+
+// movement
+gsap.utils.toArray(".content_01.parallax_item").forEach(item => {
+  gsap.fromTo(item, 
+    { x: "20%",scale:"1.1", opacity:0 },
+    {
+      x: "0%",
+      opacity:1,
+      scale:"1",
+      duration: .8,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: item,
+        start: "top center",
+        end: "bottom center",
+      },
+    }
+  );
+});
+
+
 $(document).ready(function () {
+  $("body, html").smoothWheel()
   // aos load event
   AOS.init({
-    easing: 'ease-in-out',
-    duration: 600
+    easing: 'ease-in-out-quart',
+    duration: 350
   });
   // top vis
   var top_card = $(".c_card");
@@ -134,7 +227,7 @@ let currentFrame;
 function setImages() {
   for (let i = 0; i < totalImagesCount; i++) {
     let imgElem = new Image();
-    imgElem.src = `../resource/videoimg/IMG_${111 + i}.JPG`;
+    imgElem.src = `./resource/videoimg2/IMG_${111 + i}.jpg`;
     videoImages.push(imgElem);
   }
 }

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<canvas class="sample-canvas" width="1920" height="1080"></canvas>
+    <canvas class="sample-canvas" width="1920" height="1080"></canvas>
     <section class="header_wrap">
         <article>
             <div class="logo_box">
@@ -25,28 +25,29 @@
                                 STANDARD
                             </a>
                             <span class="button--bubble__effect-container">
-                              <span class="circle top-left"></span>
-                              <span class="circle top-left"></span>
-                              <span class="circle top-left"></span>
-                              <span class="button effect-button"></span>
-                              <span class="circle bottom-right"></span>
-                              <span class="circle bottom-right"></span>
-                              <span class="circle bottom-right"></span>
+                                <span class="circle top-left"></span>
+                                <span class="circle top-left"></span>
+                                <span class="circle top-left"></span>
+                                <span class="button effect-button"></span>
+                                <span class="circle bottom-right"></span>
+                                <span class="circle bottom-right"></span>
+                                <span class="circle bottom-right"></span>
                             </span>
-                        </span></li>
+                        </span>
+                    </li>
                     <li data-aos="zoom-out-down" data-aos-delay="100">
                         <span class="button--bubble__container">
                             <a href="#campaign" class="button button--bubble">
-                              DELUXE
+                                DELUXE
                             </a>
                             <span class="button--bubble__effect-container">
-                              <span class="circle top-left"></span>
-                              <span class="circle top-left"></span>
-                              <span class="circle top-left"></span>
-                              <span class="button effect-button"></span>
-                              <span class="circle bottom-right"></span>
-                              <span class="circle bottom-right"></span>
-                              <span class="circle bottom-right"></span>
+                                <span class="circle top-left"></span>
+                                <span class="circle top-left"></span>
+                                <span class="circle top-left"></span>
+                                <span class="button effect-button"></span>
+                                <span class="circle bottom-right"></span>
+                                <span class="circle bottom-right"></span>
+                                <span class="circle bottom-right"></span>
                             </span>
                         </span>
                     </li>
@@ -56,13 +57,13 @@
                                 PREMIUM
                             </a>
                             <span class="button--bubble__effect-container">
-                              <span class="circle top-left"></span>
-                              <span class="circle top-left"></span>
-                              <span class="circle top-left"></span>
-                              <span class="button effect-button"></span>
-                              <span class="circle bottom-right"></span>
-                              <span class="circle bottom-right"></span>
-                              <span class="circle bottom-right"></span>
+                                <span class="circle top-left"></span>
+                                <span class="circle top-left"></span>
+                                <span class="circle top-left"></span>
+                                <span class="button effect-button"></span>
+                                <span class="circle bottom-right"></span>
+                                <span class="circle bottom-right"></span>
+                                <span class="circle bottom-right"></span>
                             </span>
                         </span>
                     </li>
@@ -71,23 +72,43 @@
         </article>
     </section>
     <section class="content_wrap">
-        <div class="top_cont_box" data-aos="fade-down" data-aos-delay="500">
-            <div></div>
+        <div class="top_cont_box">
+            <div class="top_cont_left" data-aos="fade-up" data-aos-delay="100">
+                <p>Different</p>
+                <p>Quality</p>
+            </div>
             <div class="c_cont">
-                <div class="perspective">
+                <div class="perspective" data-aos="zoom-in-down" data-aos-delay="500" data-aos-duration="800">
                     <div class="c_card">
                         <h1>Creative</h1>
                         <div class="thumb"></div>
                         <h1>De-sign</h1>
                     </div>
                 </div>
-                <div class="txt_box">
-                    <p data-aos="flip-down">템플릿 홈페이지는 퀄리티가 떨어진다구요?</p>
-                    <p data-aos="flip-down" data-aos-delay="100">(주)아이앤뷰커뮤니케이션은 다릅니다.</p>
+                <div class="txt_box" data-aos="zoom-in-left" data-aos-delay="200">
+                    <p>템플릿 홈페이지는 퀄리티가 떨어진다구요?</p>
+                    <p>(주)아이앤뷰커뮤니케이션은 다릅니다.</p>
                 </div>
             </div>
-            <div></div>
         </div>
+        <div class="parallax_cont">
+            <div class="content_01 parallax_item">
+                <figure class="parallax_item_imgWrap">
+                    <div class="parallax_item_img"></div>
+                </figure>
+                <p class="parallax_item_p">(주)아이앤뷰커뮤니케이션은 다릅니다. 어떻게?</p>
+                <span class="parallax_item_span">공장형으로 찍어내는 기존 템플릿 홈페이지들과 다르게 디자이너들의 수작업으로 <br>
+                    하나하나 직접 만들어낸 고퀄리티 템플릿 홈페이지입니다.</span>
+            </div>
+            <div class="content_02 parallax_item">
+                <div class="pickup_cont" data-aos="zoom-in-left" data-aos-delay="500"><p>Web Design</p></div>
+                <figure class="parallax_item_imgWrap">
+                    <div class="parallax_item_img"></div>
+                </figure>
+                <p class="parallax_item_p"><img src="img/cont_img_02_txt.webp" alt="txt"></p>
+            </div>
+        </div>
+
         <div class="ring_cont_slide_box">
             <div class="stage">
                 <div class="container">
@@ -157,11 +178,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
     <!-- Zepto -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <!-- aos -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <!-- script -->
+    <script src="http://fatlinesofcode.github.io/jquery.smoothwheel/src/jquery.smoothwheel.js"></script>
     <script src="js/script.js"></script>
 </body>
 
