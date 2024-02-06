@@ -185,12 +185,19 @@
  }
 
 
-@media (max-width:650px) {.c_cont { padding:40px; } 
+@media (max-width:650px){
+ .c_cont { padding:40px; } 
  .c_cont .c_card { width: 250px; height:350px; } 
  .c_cont .c_card h1 { mix-blend-mode: exclusion; } 
  .top_cont_left { left:0; bottom: 125px; } 
  .parallax_item_imgWrap { padding-bottom:150px; } 
- .parallax_item_p { font-size:24px; text-align: center; width: 345px; margin: 40px auto 0; } 
- .parallax_item_p + span{font-size:16px; margin-left:-20px; width:100%;}
- .parallax_item_span .line{text-align:center !important;}
+ .parallax_item_p { font-size:24px; text-align: center; width: auto; margin: 40px auto 0; } 
+ .parallax_item_p + span { font-size:16px; margin-left:-20px; width:100%; } 
+ .parallax_item_span .line { text-align:center !important; padding: 0 20px; } 
+ .parallax_item .pickup_cont { right:20px; } 
+ .parallax_item:nth-child(even) { max-width:100%; } 
+ .parallax_item:nth-child(even) .parallax_item_p { width:auto; } 
+ .parallax_item:nth-child(even) .parallax_item_p img{width:100%;}
+ .belt_cont { bottom: 20vh; } 
+.content_02 .parallax_item_imgWrap { max-width: 205px; padding-bottom: 280px; } .content_02 .parallax_item_imgWrap { max-width: 205px; padding-bottom: 280px; } 
  }
