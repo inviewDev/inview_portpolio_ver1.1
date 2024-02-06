@@ -1,9 +1,3 @@
-window.scroll({
-  top:0,
-  left:100,
-  behavior: 'smooth'
-})
-
 // ScrollMagic
 let controller = new ScrollMagic.Controller();
 // GSAP
@@ -53,7 +47,7 @@ function dragEnd(e) {
   $(window).off('mousemove touchmove', drag);
   gsap.set('.ring_box', { cursor: 'grab' });
 }
-function getBgPos(i) { 
+function getBgPos(i) {
   return (100 - gsap.utils.wrap(0, 360, gsap.getProperty('.ring_box', 'rotationY') - 180 - i * 36) / 360 * 500) + 'px 0px';
 }
 $(window).on('mousedown touchstart', dragStart);
@@ -62,10 +56,10 @@ $(window).on('mouseup touchend', dragEnd);
 new ScrollMagic.Scene({
   triggerElement: '.ring_cont_slide_box',
   offset: 100,
-  reverse: true 
+  reverse: true
 })
-.setTween(galley)
-.addTo(controller); 
+  .setTween(galley)
+  .addTo(controller);
 
 // button event
 $('.button--bubble').each(function () {
@@ -137,11 +131,11 @@ gsap.utils.toArray(".parallax_item_p, .parallax_item_span, .parallax_item_img").
       start: "top bottom",
       end: "bottom top",
       scrub: 0.5
-    },  
+    },
   });
 
   if (item.classList.contains('parallax_item_img')) {
-    gsap.fromTo(item, 
+    gsap.fromTo(item,
       { opacity: 0.1 },
       {
         opacity: 1,
@@ -164,31 +158,31 @@ gsap.utils.toArray(".parallax_item_p, .parallax_item_span, .parallax_item_img").
     let chars = SplitClient.chars;
 
     gsap.from(words, {
-        yPercent: 100,
-        opacity: 0,
-        duration: 1,
-        ease: "circ.out",
-        stagger: {
-            amount: 1,
-            from: "random"
-        },
-        scrollTrigger: {
-            trigger: item,
-            start: "top bottom",
-            end: "+=400",
-        }
+      yPercent: 100,
+      opacity: 0,
+      duration: 1,
+      ease: "circ.out",
+      stagger: {
+        amount: 1,
+        from: "random"
+      },
+      scrollTrigger: {
+        trigger: item,
+        start: "top bottom",
+        end: "+=400",
+      }
     });
   }
 });
 
 // movement
 gsap.utils.toArray(".content_01.parallax_item").forEach(item => {
-  gsap.fromTo(item, 
-    { x: "20%",scale:"1.1", opacity:0 },
+  gsap.fromTo(item,
+    { x: "20%", scale: "1.1", opacity: 0 },
     {
       x: "0%",
-      opacity:1,
-      scale:"1",
+      opacity: 1,
+      scale: "1",
       duration: .8,
       ease: "power1.inOut",
       scrollTrigger: {
@@ -210,9 +204,10 @@ gsap.from(".belt_cont", {
   }
 });
 
-gsap.fromTo(".belt_cont b", 
-  { x: "200%", scale: 1, opacity: 0 }, 
-  { x: "5%", scale: 1, opacity: 1,
+gsap.fromTo(".belt_cont b",
+  { x: "200%", scale: 1, opacity: 0 },
+  {
+    x: "5%", scale: 1, opacity: 1,
     scrollTrigger: {
       trigger: ".parallax_cont",
       start: "center center",
@@ -222,9 +217,10 @@ gsap.fromTo(".belt_cont b",
   }
 );
 
-gsap.fromTo(".solve_one", 
-  { scale: 2.5, opacity: 0 }, 
-  { scale: 1, opacity: 1,
+gsap.fromTo(".solve_one",
+  { scale: 2.5, opacity: 0 },
+  {
+    scale: 1, opacity: 1,
     scrollTrigger: {
       trigger: ".solve_cont",
       duration: .8,
@@ -234,10 +230,10 @@ gsap.fromTo(".solve_one",
   }
 );
 
-
-gsap.fromTo(".solve_two", 
-  { y:"50%", scale: .5, opacity: 0 }, 
-  { y:"0", scale: 1, opacity: 1,
+gsap.fromTo(".solve_two",
+  { y: "50%", scale: .5, opacity: 0 },
+  {
+    y: "0", scale: 1, opacity: 1,
     scrollTrigger: {
       trigger: ".solve_cont",
       duration: 1.2,
@@ -248,8 +244,22 @@ gsap.fromTo(".solve_two",
   }
 );
 
+gsap.fromTo(".projects_box img",
+  { y: "-30%", scale:1, opacity: 0 },
+  {
+    y: "0", scale: 1, opacity: 1,
+    scrollTrigger: {
+      trigger: ".projects_box",
+      ease: "power3.inOut",
+      start: "top center",
+      end: "top center",
+      scrub: 1,
+      restart:true
+    }
+  }
+);
+
 $(document).ready(function () {
-  $("body, html").smoothWheel()
   // aos load event
   AOS.init({
     easing: 'ease-in-out-quart',
@@ -258,10 +268,25 @@ $(document).ready(function () {
   // top vis
   var top_card = $(".c_card");
   $(".c_cont").on("mousemove", function (t) {
-      var e = -($(window).innerWidth() / 2 - t.pageX) / 60,
-          n = ($(window).innerHeight() / 2 - t.pageY) / 50;
-      top_card.attr("style", "transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-webkit-transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-moz-transform: rotateY(" + e + "deg) rotateX(" + n + "deg)")
+    var e = -($(window).innerWidth() / 2 - t.pageX) / 60,
+      n = ($(window).innerHeight() / 2 - t.pageY) / 50;
+    top_card.attr("style", "transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-webkit-transform: rotateY(" + e + "deg) rotateX(" + n + "deg);-moz-transform: rotateY(" + e + "deg) rotateX(" + n + "deg)")
   })
+
+  // tap
+  $(".tap_btn_group a").on("click", function (e) {
+    e.preventDefault();
+    var a_this = $(this);
+    var tapVal = a_this.index();
+    var parentTapBox = a_this.closest('.tap_box');
+    a_this.addClass('active');
+    parentTapBox.find('.tap_btn_group a').removeClass('active');
+    parentTapBox.find('.tap_cont_group div').removeClass('active');
+    parentTapBox.find('.tap_btn_group a').eq(tapVal).addClass('active');
+    parentTapBox.find('.tap_cont_group div').eq(tapVal).addClass('active');
+    var ddd = parentTapBox.find('.tap_cont_group div').eq(tapVal).find("li").length
+    console.log(ddd)
+  });
 })
 
 // video img
