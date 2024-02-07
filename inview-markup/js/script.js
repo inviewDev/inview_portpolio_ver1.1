@@ -320,3 +320,25 @@ function init() {
 }
 window.addEventListener('load', init);
 setImages();
+
+$(function(){
+  $('nav a').on('click', function(e){
+      e.preventDefault();
+
+      var navHref = $(this).attr('href').substring(1);
+      var tapContent = $('.tap_btn_group > a').filter(function(){
+          return $(this).data('tap-cont') === navHref;
+      });
+
+      var targetContent = $('.tap_cont_group > div').filter(function(){
+          return $(this).data('tap-cont') === navHref;
+      });
+
+      $('.tap_btn_group a, .tap_cont_group > div').removeClass('active');
+      targetContent.addClass('active');
+      tapContent.addClass('active');
+
+      var offsetTop = $('.projects_box').offset().top;
+      $('html, body').animate({scrollTop: offsetTop}, 600);
+  });
+});

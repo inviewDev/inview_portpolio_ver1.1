@@ -57,7 +57,7 @@
 .ring_cont_slide_box .stage .container .ring_box .cont_box { width: 100%; height: 100%; transform-style: preserve-3d; user-select: none; position: absolute; border-radius: 20px; overflow: hidden; } 
 .ring_cont_slide_box .stage .container .ring_box .cont_box img { width: 100%; height: 100%; object-fit: cover; object-position: top; pointer-events: none; touch-action: none; } 
 .belt_cont { position: absolute; left: 0; bottom: 30vh; width: 100%; height: auto; z-index: -1; display: flex; align-items: center; overflow: hidden; } 
-.belt_cont b { font-size: 130px; font-family: 'Apple SD Gothic Neo'; font-weight: 800; color: #ffffff; } 
+.belt_cont b { font-size: 117px; font-family: 'Montserrat'; font-weight: 800; color: #ffffffbd; letter-spacing: -0.2rem; } 
 
 /* solve_cont */
 .solve_cont { height: 100vh; width: 100%; max-width: 1600px; margin: 0 auto; position: relative; padding: 0 40px; } 
@@ -80,7 +80,7 @@
 .solve_cont.only_ssm > div { } 
 .solve_cont.only_ssm > .solve_one { width: 100%; height: 90px; } 
 .solve_cont.only_ssm > .solve_one img { width: 100%; max-width: 220px; left: 0; top: 0; } 
-.solve_cont.only_ssm > .solve_two { top: 0; left: 0; height: 315px; } 
+.solve_cont.only_ssm > .solve_two { top: 0; height: 315px; } 
 .solve_cont.only_ssm > .solve_two img:nth-of-type(1) { top: -20px; left: -25px; } 
 .solve_cont.only_ssm > .solve_two img:nth-of-type(2) { top: 50%; left: 70px; transform: translateY(-50%); } 
 .solve_cont.only_ssm > .solve_two img:nth-of-type(3) { left: 30px; top: calc(50% - 10px); transform: translateY(-50%); } 
@@ -94,7 +94,7 @@
  
 /* projects_box */
 .projects_box { width: 100%; max-width: 1600px; margin: 0 auto 200px; position: relative; padding: 0 20px; } 
-.projects_box > h2 { font-family: 'Montserrat'; font-size: 120px; line-height: 1; font-weight: 600; color: #fff; margin-bottom: 120px; } 
+.projects_box > h2 { font-family: 'Montserrat'; font-size: 120px; line-height: 1; font-weight: 800; color: #fff; margin-bottom: 120px; } 
 .projects_box > img { position: absolute; top: -155px; left: 20px; mix-blend-mode: difference; } 
 
 .projects_box .tap_box { } 
@@ -171,14 +171,15 @@
  .parallax_item .pickup_cont { width: 150px; height: 45px; font-size: 18px; right: 55px; top: -15px; } 
  .parallax_item .pickup_cont p { font-size: initial; } 
 .belt_cont { bottom: 25vh; } 
-.belt_cont b { font-size: 90px; line-height: 1; } 
+.belt_cont b { font-size: 90px; line-height: .9; } 
 .solve_cont .solve_one img:nth-of-type(1) { } 
 .solve_cont .solve_one img:nth-of-type(4) { bottom: -235px; } 
 .ring_cont_slide_box > h2 { font-size: 36px; padding: 0 20px; margin-bottom: -40px; } 
 .ring_cont_slide_box > h3 { font-size:80px; bottom: 40px; } 
 .ring_cont_slide_box .stage { height:610px; } 
 .ring_cont_slide_box { margin-bottom:20px; } 
-.projects_box > h2 { font-size: 60px; margin-bottom: 50px; } 
+.projects_box > img{z-index:-1;}
+.projects_box > h2 { font-size: 60px; margin-bottom: 50px; font-weight:800; position: relative; z-index: -1; } 
 .projects_box .tap_btn_group { margin-bottom:40px; justify-content: center; gap: 0 25px; } 
 .projects_box .tap_btn_group a { font-size:14px; } 
 .projects_box .tap_btn_group a span { width:24px; height:24px; font-size:14px; top: -15px; right: -20px; } 
