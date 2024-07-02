@@ -41,6 +41,42 @@ const homepageList = [
     ver: "PREMIUM",
     name: "템플릿07",
     },
+    {
+    url: "https://inviewdev.cafe24.com/skin-skin15/",
+    img: "skin15",
+    ver: "PREMIUM",
+    name: "템플릿08",
+    },
+    {
+    url: "https://inviewdev.cafe24.com/skin-skin16/",
+    img: "skin16",
+    ver: "DELUXE",
+    name: "템플릿09",
+    },
+    {
+    url: "https://inviewdev.cafe24.com/skin-skin17/",
+    img: "skin17",
+    ver: "DELUXE + SHOP",
+    name: "템플릿10",
+    },
+    {
+    url: "https://inviewdev.cafe24.com/skin-skin19/",
+    img: "skin19",
+    ver: "DELUXE",
+    name: "템플릿11",
+    },
+    {
+    url: "https://inviewdev.cafe24.com/skin-skin20/",
+    img: "skin20",
+    ver: "STANDARD",
+    name: "템플릿12",
+    },
+    {
+    url: "https://inviewdev.cafe24.com/skin-skin21/",
+    img: "skin21",
+    ver: "DELUXE",
+    name: "템플릿12",
+    },
 ];
 
 function setList(pfFrame) {
