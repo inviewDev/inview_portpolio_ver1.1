@@ -75,7 +75,7 @@ const homepageList = [
     url: "https://inviewdev.cafe24.com/skin-skin21/",
     img: "skin21",
     ver: "DELUXE",
-    name: "템플릿12",
+    name: "템플릿13",
     },
 ];
 
