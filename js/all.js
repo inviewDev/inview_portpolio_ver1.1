@@ -77,6 +77,24 @@ const homepageList = [
     ver: "DELUXE",
     name: "템플릿13",
     },
+    {
+    url: "https://inviewdev.cafe24.com/skin-skin22/",
+    img: "skin22",
+    ver: "STANDARD",
+    name: "템플릿14",
+    },
+    {
+    url: "https://inviewdev.cafe24.com/skin-skin23/",
+    img: "skin23",
+    ver: "PREMIUM + SHOP",
+    name: "템플릿15",
+    },
+    {
+    url: "https://inviewdev.cafe24.com/skin-skin24/",
+    img: "skin24",
+    ver: "PREMIUM",
+    name: "템플릿16",
+    },
 ];
 
 function setList(pfFrame) {
