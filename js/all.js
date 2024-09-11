@@ -102,7 +102,7 @@ function setList(pfFrame) {
     pfFrame.innerHTML +=
       "<li><a href=" +
       homepageList[i].url +' target="_blank"><img src="./img/web_portpolio/' +
-      homepageList[i].img +'.png" alt="' +
+      homepageList[i].img +'.webp" alt="' +
       homepageList[i].name +' 섬네일" /></a>' +
       '<a href="' +
       homepageList[i].url +
