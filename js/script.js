@@ -322,7 +322,7 @@ window.addEventListener('load', init);
 setImages();
 
 $(function(){
-  $('nav a').on('click', function(e){
+  $('nav a.nav_btn').on('click', function(e){
       e.preventDefault();
 
       var navHref = $(this).attr('href').substring(1);
