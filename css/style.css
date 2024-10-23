@@ -8,7 +8,7 @@ a.inquiry_btn { background: #ff2174; display: inline-block; width: 100vw; max-wi
 .header_wrap nav ul { display: flex; gap: 0 50px; } 
 .header_wrap nav ul li { font-family: 'montserrat',sans-serif; font-size: 18px; font-weight: 500; color: #fff; } 
 .template_move { position: fixed; right: 0; color: #000000; background: #a7ff32; height: 45px; line-height: 48px; width: 130px; text-align: center; top: 150px; font-weight: 600; font-size: 16px; overflow: hidden; padding-left: 10px; z-index: 99999; } 
-.template_move::after { content:""; position:absolute; border: rgb(124 217 0 / 74%); background: rgb(124 217 0 / 74%); width:100px; height: 50px; top: -17px; left: -65px; transform: rotate(-45deg); } 
+.template_move::after {display:none; content:""; position:absolute; border: rgb(124 217 0 / 74%); background: rgb(124 217 0 / 74%); width:100px; height: 50px; top: -17px; left: -65px; transform: rotate(-45deg); } 
 .template_move.on_project { opacity:0 !important; } 
 
 /* mo */
